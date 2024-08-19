@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/react";
+// Removed Vercel Analytics import for Netlify deployment
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 // config
@@ -20,9 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-gray"}>
+      <body className={inter.className + " bg-grayBackground"}>
         {children}
-        <Analytics />
       </body>
     </html>
   );

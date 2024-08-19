@@ -1,101 +1,89 @@
 const config = {
-    domain: "theproduct.com",
-    title: "Waitlist Page | The Product",
-    description: "Elevate your texts with the perfect emojis. Usemoji.app is coming soon! Join the waiting list for updates and exclusive access.",
-    subscribeForm: "https://dashboard.mailerlite.com/forms/631411/101265918935434456/share",
+    domain: "laptimes.arbyswift.com",
+    title: "Lap Times",
+    description: "Experience Formula 1 racing like never before with real-time data visualization, performance analytics, and strategic insights. Join the waitlist for early access to Lap Times.",
+    subscribeForm: "https://dashboard.mailerlite.com/forms/1390274/149064615311967428/share",
 
     socials: {
-        twitter: "https://x.com/beratbozkurt0",
+        twitter: "https://x.com/arbyswift",
     },
 
     contents: {
-        title: "Discover Your Ideal Experience with The Product",
-        markOfTitle: "The Product", // its for marking the title. The text must contain on title. If not, it will be ignored.
-        description: `Step into a realm of possibilities with The Product. Immerse yourself
-        in a shopping journey where intuitive features and cutting-edge design
-        come together to enhance your every selection.`,
+        title: "Experience F1 Racing with Real-Time Data Visualization",
+        markOfTitle: "LapTimes", // its for marking the title. The text must contain on title. If not, it will be ignored.
+        description: `Get unprecedented insights into Formula 1 races with LapTimes. Track live race positions, analyze qualifying performance, compare driver stats, and predict race strategies with our comprehensive data visualization app.`,
 
         about: [
             {
                 id: 1,
-                emoji: "💡",
-                title: "Innovative Design",
-                description: "The Product is designed to be a seamless experience for all users. Our team has worked tirelessly to create a platform that is both intuitive and visually stunning."
+                emoji: "🏎️",
+                title: "Live Race Tracking",
+                description: "Follow races in real-time with dynamic position tracking, gap times between drivers, and tire compound monitoring for complete strategic insights."
             },
             {
                 id: 2,
-                emoji: "🚀",
-                title: "Fast and Efficient",
-                description: "We understand that your time is valuable. That's why we've optimized The Product to be as fast and efficient as possible. Spend less time shopping and more time enjoying your purchases."
+                emoji: "📊",
+                title: "Performance Analytics",
+                description: "Dive deep into sector-by-sector comparisons, qualifying data, and historical performance trends to understand driver and team strengths."
             },
             {
                 id: 3,
-                emoji: "🌎",
-                title: "Global Reach",
-                description: "The Product is available to users all around the world. No matter where you are, you can access our platform and discover the perfect product for you."
+                emoji: "🧠",
+                title: "Strategic Insights",
+                description: "Analyze pit stop timing, tire compound selection, and race strategy simulations to predict outcomes and understand team decisions."
             }
         ],
 
         howWorks: [
             {
-                title: "Install the extension",
-                description: "The Product is available as a browser extension. Simply install it and you're ready to go!"
+                title: "Download the app",
+                description: "Once released, download LapTimes from the App Store and create your account to get started."
             },
             {
-                title: "Select your text",
-                description: "Highlight any text on any website and The Product will automatically will find emoji that match your selection."
+                title: "Select a race weekend",
+                description: "Choose from current or past race weekends to access practice, qualifying, and race data."
             },
             {
-
-                title: "Personalize suggestions",
-                description: "Customize your emoji suggestions based on your preferences and writing style."
+                title: "Explore real-time data",
+                description: "During live races, watch as driver positions, lap times, and strategic decisions unfold in real-time with beautiful visualizations."
             },
             {
-                title: "Seamless integration",
-                description: "Enjoy effortless integration with your browser, making emoji suggestions readily available."
+                title: "Analyze performance metrics",
+                description: "Compare drivers, teams, and historical data with interactive charts and detailed analytics."
             },
             {
-                title: "Copy and paste",
-                description: "Once you've selected your emoji, simply copy it and paste it wherever you like. It's that easy!"
+                title: "Predict race strategies",
+                description: "Use our strategy simulator to predict pit stops, tire choices, and race outcomes based on current data."
             },
         ],
 
         price: {
-            description: "Unlock endless emoji possibilities with our monthly subscription. Cancel anytime, stress-free!",
-            price: "9$",
+            description: "Get premium F1 data insights with our subscription plans. Early waitlist members receive special pricing!",
+            price: "4.99$",
 
-            advantages: ['Cancel anytime.', 'Analyze text emotions for suitable emoji suggestions.', 'Unlimited emoji access: Explore vast library.', 'Bullet points yield perfect results.', 'Ease of use.']
+            advantages: ['Real-time race data visualization', 'Historical race analysis and comparisons', 'Team and driver performance metrics', 'Strategy prediction tools', 'Regular updates with new features']
         },
 
         faq: [
             {
-                question: "What is The Product?",
-                answer: "The Product is a browser extension that suggests emoji based on your text selection. It's designed to make your online experience more fun and engaging."
+                question: "What is LapTimes?",
+                answer: "LapTimes is an iOS app that provides real-time Formula 1 data visualization, performance analytics, and strategic insights for F1 fans."
             },
             {
-                question: "How do I install The Product?",
-                answer: "The Product is available as a browser extension. Simply install it and you're ready to go!"
-            },
-
-            {
-                question: "How do I use The Product?",
-                answer: "Highlight any text on any website and The Product will automatically will find emoji that match your selection."
+                question: "When will LapTimes be available?",
+                answer: "LapTimes is currently in development. Join our waitlist to be notified when it launches and get early access."
             },
             {
-                question: "Is The Product free?",
-                answer: "The Product is available as a monthly subscription. You can cancel anytime, stress-free!"
+                question: "What features will LapTimes include?",
+                answer: "LapTimes will include live race tracking, qualifying performance analysis, driver comparisons, team performance metrics, and race strategy simulations."
             },
             {
-                question: "Can I customize my emoji suggestions?",
-                answer: "Yes! You can personalize your emoji suggestions based on your preferences and writing style."
+                question: "Will LapTimes be available for Android?",
+                answer: "Initially, LapTimes will be available for iOS devices only. Android support may be added in the future based on demand."
             },
             {
-                question: "Is The Product available globally?",
-                answer: "Yes! The Product is available to users all around the world."
-            },
-            {
-                question: "How do I cancel my subscription?",
-                answer: "You can cancel your subscription anytime. Simply go to your account settings and click 'cancel subscription'."
+                question: "How do I contact support?",
+                answer: "You can contact our support team by emailing support@theproduct.com."
             },
             {
                 question: "How do I contact support?",

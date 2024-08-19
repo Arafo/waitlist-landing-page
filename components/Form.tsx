@@ -3,6 +3,8 @@
 import { useState } from "react";
 // config
 import config from "@/config/general";
+// components
+import SuccessModal from "./SuccessModal";
 
 const findRequestURL = (mail: string) => {
   const formURL = config.subscribeForm.split("/");
@@ -20,6 +22,8 @@ const Form = () => {
   const [mail, setMail] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [message, setMessage] = useState<string>("");
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
+  const [submittedEmail, setSubmittedEmail] = useState<string>("");
 
   const onSubmit = (e: any) => {
     e.preventDefault();
@@ -30,20 +34,23 @@ const Form = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
-          setMessage("Thanks for subscribing!");
+          setSubmittedEmail(mail);
+          setShowSuccessModal(true);
+          setMessage("");
         } else {
           setMessage("Something went wrong, please try again.");
         }
       })
       .catch(() => setMessage("Something went wrong, please try again."))
       .finally(() => {
+        setLoading(false);
         setMail("");
       });
   };
   return (
-    <form onSubmit={onSubmit}>
-      <div className="relative">
-        <div className="min-w-0 flex-1">
+    <>
+      <form onSubmit={onSubmit} className="flex flex-col gap-4 max-w-md mx-auto">
+        <div className="relative">
           <label htmlFor="email" className="sr-only">
             Email address
           </label>
@@ -53,24 +60,34 @@ const Form = () => {
             autoComplete="email"
             aria-invalid="false"
             id="email"
-            placeholder="Enter your email"
-            className="form-control block w-full rounded-sm bg-gray px-4 py-5 text-base text-black placeholder-gray-500 focus:outline-none"
+            placeholder="Email address..."
+            className="form-control neumorphic-input block w-full text-base text-white placeholder-appleGray"
             value={mail}
             onChange={(e) => setMail(e.target.value)}
           />
         </div>
-        <div className="mt-1 ml-2 sm:mt-3 sm:ml-3 flex-1 sm:flex-auto w-full sm:w-auto">
+        <div className="relative">
           <button
             type="submit"
-            className="relative sm:absolute right-2 sm:top-2 w-full sm:w-auto block  rounded-sm bg-activeButton py-3 px-4 font-medium text-white shadow hover:bg-activeButton disabled:cursor-not-allowed"
+            className="w-full bg-activeButton py-3 px-5 font-medium text-white disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             disabled={mail === "" || loading}
           >
-            Join Waitlist
+            <span>Join the waitlist</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="white"/>
+            </svg>
           </button>
         </div>
-      </div>
-      <span className="text-sm px-2 italic text-red-500">{message}</span>
-    </form>
+        <span className="text-sm text-center font-normal text-appleGray">{message}</span>
+      </form>
+      
+      {showSuccessModal && (
+        <SuccessModal 
+          email={submittedEmail} 
+          onClose={() => setShowSuccessModal(false)}
+        />
+      )}
+    </>
   );
 };
 
